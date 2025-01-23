@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      DeOxy Tech
+    </title>
+    <meta name="description" content="DeOxy Tech" />
+    <meta name="keywords" content />
+    <meta name="author" content />
+    <link rel="stylesheet"
+      href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <!--Replace with your tailwind.css once created-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700"
+      rel="stylesheet" />
+    <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
+    <style>
+      .gradient {
+        background: linear-gradient(90deg, #84a98c 10%, #2f3e46 100%);
+      }
+    </style>
+    <script src="https://unpkg.com/htmx.org@latest"></script>
+  </head>
+  <body class="leading-normal tracking-normal text-white gradient"
+    style="font-family: 'Source Sans Pro', sans-serif;">
+    <!--Nav-->
+    <nav id="header" class="fixed w-full z-30 top-0 text-white">
+      <div
+        class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+        <div class="pl-4 flex items-center">
+          <a
+            class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+            href="#">
+            <!--Icon from: http://www.potlabicons.com/ -->
+            <svg class="h-8 fill-current inline"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
+              <!-- <rect fill="#2a2a31" x="16.539" y="425.626" width="479.767" height="50.502" transform="matrix(1,0,0,1,0,0)" /> -->
+              <path
+                class="plane-take-off"
+                d=" M413.876,34.73c0-19.151-15.579-34.73-34.729-34.73s-34.73,15.579-34.73,34.73c0,10.532-1.455,21.047-4.131,31.564
+                H171.685c-1.797-7.109-3.038-14.23-3.651-21.365h111.425c5.633,0,10.199-4.566,10.199-10.199c0-5.633-4.566-10.199-10.199-10.199
+                H166.055C161.686,10.342,148.457,0,132.854,0c-19.15,0-34.73,15.579-34.73,34.73c0,80.895,52.403,151.003,112.129,221.269
+                C152.28,324.16,98.124,395.274,98.124,477.27c0,19.15,15.579,34.73,34.73,34.73c14.823,0,27.501-9.338,32.476-22.438h181.339
+                c4.975,13.1,17.653,22.438,32.476,22.438c19.15,0,34.73-15.579,34.73-34.73c0-81.081-52.47-151.094-112.129-221.269
+                C359.721,187.84,413.876,116.726,413.876,34.73z M333.626,86.693c-2.959,7.47-6.47,14.947-10.444,22.438h-134.46
+                c-3.958-7.475-7.455-14.952-10.408-22.438H333.626z M215.876,151.968c-5.418-7.484-10.532-14.962-15.263-22.438H311.29
+                c-4.718,7.458-9.827,14.935-15.249,22.438H215.876z M280.638,172.367c-7.843,9.999-16.116,20.054-24.64,30.179
+                c-8.501-10.087-16.796-20.142-24.688-30.179H280.638z M118.523,34.73c0-7.902,6.43-14.332,14.332-14.332
+                c7.903,0,14.332,6.43,14.332,14.332c0,45.56,22.593,88.815,53.954,131.649c0.593,1.304,1.451,2.458,2.508,3.399
+                c12.033,16.193,25.266,32.335,38.956,48.524c-4.276,4.994-8.591,10.005-12.924,15.039c-1.996,2.318-3.994,4.64-5.992,6.963
+                C167.41,173.897,118.523,107.878,118.523,34.73z M147.186,477.27c0.001,7.902-6.429,14.332-14.332,14.332
+                c-7.902,0-14.332-6.43-14.332-14.332c0-83.55,64.368-158.316,126.617-230.62c61.544-71.485,119.674-139.007,119.674-211.919
+                c0-7.902,6.43-14.332,14.332-14.332c7.902,0,14.332,6.43,14.332,14.332c0,83.55-64.368,158.316-126.617,230.62
+                C205.317,336.836,147.186,404.358,147.186,477.27z M199.4,384.563c4.647-7.459,9.691-14.936,15.057-22.438h83.181
+                c5.362,7.483,10.41,14.961,15.069,22.438H199.4z M324.376,404.961c3.871,7.474,7.275,14.952,10.126,22.438H177.567
+                c2.857-7.471,6.268-14.948,10.155-22.438H324.376z M229.725,341.726c8.326-10.689,17.158-21.44,26.278-32.271
+                c9.092,10.788,17.949,21.54,26.328,32.271H229.725z M167.876,469.163c0.494-7.125,1.624-14.245,3.325-21.365h169.63
+                c1.686,7.109,2.813,14.229,3.304,21.365H167.876z M393.478,477.27c0,7.902-6.43,14.332-14.332,14.332
+                c-7.903,0-14.332-6.43-14.332-14.332c0-64.023-44.589-123.461-95.418-183.571c4.276-4.994,8.592-10.005,12.924-15.039
+                c1.996-2.318,3.994-4.64,5.993-6.964C344.529,338.013,393.478,403.95,393.478,477.27z" />
+            </svg>
+            DeOxy Tech
+          </a>
+        </div>
+        <!-- <div class="block lg:hidden pr-4">
+          <button id="nav-toggle"
+            class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            <svg class="fill-current h-6 w-6" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div> -->
+        <!-- <div
+          class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
+          id="nav-content">
+          <ul class="list-reset lg:flex justify-end flex-1 items-center">
+
+          </ul>
+                    <a href="{{ url_for('sign_up') }}">
+          
+          
+          <button
+          id="navAction"
+          class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            Contact us!
+          </button>
+          </a>
+          <!-- <button
+            id="navAction"
+            class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            Sign Up for Updates!
+          </button> -->
+        <!-- </div> --> 
+      </div>
+      <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+    </nav>
+    <!--Hero-->
+    <div class="pt-24">
+      <div
+        class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+        <!--Left Col-->
+        <div
+          class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
+          <p class="uppercase tracking-loose w-full">Understanding the Language of Life</p>
+          <h2 class="my-4 text-4xl font-bold leading-tight">
+            The Vision
+          </h1>
+          <p class="leading-normal text-2xl mb-8 text-justify"> 
+            <strong>Cancer.</strong> 
+            Every year millions of people have their lives prematurely cut short. 
+            <strong>Bird Flu.</strong> Over half a billion chickens have died due to bird flu since 2023. 
+            This disease is slowly becoming a threat to a variety of ecosystems, whose services human lives and livelihoods depend on. 
+            <strong>AMR.</strong> Drug resistant strains of bacteria and fungus may very well bring us back to a time where a simple paper cut leads to an amputation. 
+            All of these diseases & problems are connected by changes in the DNA and we at DeOxy Tech, aim to build a world where the complexities of biology are <i>understood</i> and <i>controlled</i>.
+          </p>
+          <!-- <a href="{{ url_for('sign_up') }}">
+          
+          
+          <button
+          class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+
+          >
+            Subscribe for Updates
+          </button>
+          </a> -->
+
+        <!-- <div id="response"></div>  -->
+        </div>
+        <!--Right Col-->
+        <div class="w-full md:w-3/5 py-6 text-center">
+          <img class="w-full md:w-4/5 z-50" src="images/mainpage_v2.png" />
+        </div>
+      </div>
+    </div>
+    <div class="relative -mt-12 lg:-mt-24">
+      <svg viewBox="0 0 1428 174" version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g transform="translate(-2.000000, 44.000000)" fill="#FFFFFF"
+            fill-rule="nonzero">
+            <path
+              d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
+              opacity="0.100000001"></path>
+            <path
+              d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+              opacity="0.100000001"></path>
+            <path
+              d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
+              id="Path-4" opacity="0.200000003"></path>
+          </g>
+          <g transform="translate(-4.000000, 76.000000)" fill="#FFFFFF"
+            fill-rule="nonzero">
+            <path
+              d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"></path>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <section class="bg-white border-b py-8">
+      <div class="container max-w-5xl mx-auto m-8">
+        <h2
+          class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+          Projects 
+        </h2>
+        <div class="w-full mb-4">
+          <div
+            class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="w-5/6 sm:w-1/2 p-6">
+            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+              Life as a Function: Why Transformer Architectures Struggle to Gain
+              Genome-Level Foundational Capabilities
+            </h3>
+            <p class="text-gray-600 mb-8">
+              Recent years have seen a flurry of generative nucleotide models,
+              mostly of limited utility.
+              In this paper, we use the functional representation of DNA as a
+              complex,
+              composite function on the plane of evolution to extend the
+              theoretical unification of ecological and evolutionary change to
+              the problem of synthetic DNA models.
+              Through experiments on synthetic and real DNA sequences we show
+              that next-token prediction decoder transformer architectures are
+              limited in their capacity to learn such functions.
+              <br />
+              <br />
+
+              Preprint:
+
+              <a class="text-pink-500 underline"
+                href="https://www.biorxiv.org/content/10.1101/2025.01.13.632745v1">bioRxiv</a>
+            </p>
+          </div>
+          <div class="w-full sm:w-1/2 p-6">
+            <img class class="w-full sm:h-64 mx-auto"  src="images/gallivirus.png">
+          
+            
+
+          </div>
+        </div>
+        <div class="flex flex-wrap flex-col-reverse sm:flex-row">
+          <div class="w-full sm:w-1/2 p-6 mt-6">
+            <img class class="w-full sm:h-64 mx-auto"  src="images/dvq.png">
+          </div>
+          <div class="w-full sm:w-1/2 p-6 mt-6">
+            <div class="align-middle">
+              <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+                DVQ: DNA Visualisations and Quick comparisons
+              </h3>
+              <p class="text-gray-600 mb-8">
+                We introduce DVQ (DNA Visualisations and Quick comparisons), an open-source Python library for exploring nucleotide sequences using a variety of methods. 
+                Understanding DNA sequences intuitively isimportant for a variety of tasks in biology. 
+                DVQ aims to be a one-stop comprehensive library that makes explainable DNA easy for geneticists, researchers, and practitioners who need explanations. 
+                For practitioners, the library provides an easy-to-use interface to generate visualisations for their sequencesby only writing a few lines of code. 
+                In this report, we demonstrate several example use cases across different types of sequences as well as visualisations.
+                <br />
+                <br />
+                Package repo:
+                <a class="text-pink-500 underline"
+                  href="https://github.com/hssn-20/dvq">DVQ</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Change the colour #f8fafc to match the previous section colour -->
+    <svg class="wave-top" viewBox="0 0 1439 147" version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
+          <g class="wave" fill="#f8fafc">
+            <path
+              d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"></path>
+          </g>
+          <g transform="translate(1.000000, 15.000000)" fill="#FFFFFF">
+            <g
+              transform="translate(719.500000, 68.500000) rotate(-180.000000) translate(-719.500000, -68.500000) ">
+              <path
+                d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
+                opacity="0.100000001"></path>
+              <path
+                d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+                opacity="0.100000001"></path>
+              <path
+                d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
+                opacity="0.200000003"></path>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+    <section class="container mx-auto text-center py-6 mb-12">
+      <!-- <h2
+        class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
+        Call to Action
+      </h2> -->
+      <div class="w-full mb-4">
+        <div
+          class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
+      </div>
+      <h3 class="my-4 text-3xl leading-tight">
+        If you have any questions, feel free to reach out to us!
+      </h3>
+      <a href="sign_up.html">
+      <button
+        class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+        Contact Us!
+      </button>
+      </a>
+    </section>
+
+    <!-- jQuery if you need it
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  -->
+    <script>
+      var scrollpos = window.scrollY;
+      var header = document.getElementById("header");
+      var navcontent = document.getElementById("nav-content");
+      var navaction = document.getElementById("navAction");
+      var brandname = document.getElementById("brandname");
+      var toToggle = document.querySelectorAll(".toggleColour");
+
+      document.addEventListener("scroll", function () {
+        /*Apply classes for slide in bar*/
+        scrollpos = window.scrollY;
+
+        if (scrollpos > 10) {
+          header.classList.add("bg-white");
+          navaction.classList.remove("bg-white");
+          navaction.classList.add("gradient");
+          navaction.classList.remove("text-gray-800");
+          navaction.classList.add("text-white");
+          //Use to switch toggleColour colours
+          for (var i = 0; i < toToggle.length; i++) {
+            toToggle[i].classList.add("text-gray-800");
+            toToggle[i].classList.remove("text-white");
+          }
+          header.classList.add("shadow");
+          navcontent.classList.remove("bg-gray-100");
+          navcontent.classList.add("bg-white");
+        } else {
+          header.classList.remove("bg-white");
+          navaction.classList.remove("gradient");
+          navaction.classList.add("bg-white");
+          navaction.classList.remove("text-white");
+          navaction.classList.add("text-gray-800");
+          //Use to switch toggleColour colours
+          for (var i = 0; i < toToggle.length; i++) {
+            toToggle[i].classList.add("text-white");
+            toToggle[i].classList.remove("text-gray-800");
+          }
+
+          header.classList.remove("shadow");
+          navcontent.classList.remove("bg-white");
+          navcontent.classList.add("bg-gray-100");
+        }
+      });
+    </script>
+    <script>
+      /*Toggle dropdown list*/
+      /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+
+      var navMenuDiv = document.getElementById("nav-content");
+      var navMenu = document.getElementById("nav-toggle");
+
+      document.onclick = check;
+      function check(e) {
+        var target = (e && e.target) || (event && event.srcElement);
+
+        //Nav Menu
+        if (!checkParent(target, navMenuDiv)) {
+          // click NOT on the menu
+          if (checkParent(target, navMenu)) {
+            // click on the link
+            if (navMenuDiv.classList.contains("hidden")) {
+              navMenuDiv.classList.remove("hidden");
+            } else {
+              navMenuDiv.classList.add("hidden");
+            }
+          } else {
+            // click both outside link and outside menu, hide menu
+            navMenuDiv.classList.add("hidden");
+          }
+        }
+      }
+      function checkParent(t, elm) {
+        while (t.parentNode) {
+          if (t == elm) {
+            return true;
+          }
+          t = t.parentNode;
+        }
+        return false;
+      }
+    </script>
+  </body>
+</html>

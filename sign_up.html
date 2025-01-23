@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Form</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    /* New gradient background */
+    .gradient {
+      background: linear-gradient(90deg, #84a98c 10%, #2f3e46 100%);
+      min-height: 100vh; /* ensures the gradient covers full vertical height */
+    }
+    
+    .form-container {
+      max-width: 400px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .form-container h1 {
+      margin-top: 0;
+      font-size: 24px;
+      text-align: center;
+    }
+    .form-field {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    button[type="submit"] {
+      display: inline-block;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      background: #3498db;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover {
+      background: #2980b9;
+    }
+  </style>
+</head>
+<body class="gradient">
+
+<div class="form-container">
+  <h1>Contact Form</h1>
+  <form action="https://api.sheetmonkey.io/form/fypE5DneP8qud1J348A7UG" method="post">
+    <div class="form-field">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="Name" required />
+    </div>
+    <div class="form-field">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="Email" required />
+    </div>
+    <div class="form-field">
+      <label for="message">Message</label>
+      <textarea id="message" name="Message" rows="5" cols="50" required></textarea>
+    </div>
+    <!-- Hidden field to capture creation date/time in your spreadsheet -->
+    <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
+    
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>
